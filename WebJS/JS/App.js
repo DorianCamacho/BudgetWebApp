@@ -118,14 +118,14 @@ let AddData = () =>{
     let Type = Forms["Type"];
     let Description = Forms["Description"];
     let Value = Forms["Value"];
-    if(Description.Value !== "" && Value.Value !== ""){
-        if(Type.Value === "Income"){
-            incomes.push(new Income(Description.Value, +Value.Value));
+    if(Description.value !== "" && Value.value !== ""){
+        if(Type.value === "Income"){
+            incomes.push(new Income(Description.value, +Value.value));
             LoadHeader();
             LoadIncome();
         }
-        else if(Type.Value === "Outcome"){
-            outcomes.push(new Outcome(Description.Value, +Value.Value));
+        else if(Type.value === "Outcome"){
+            outcomes.push(new Outcome(Description.value, +Value.value));
             LoadHeader();
             LoadOutcome();
         }
