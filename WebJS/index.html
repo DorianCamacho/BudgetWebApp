@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget App</title>
+    <title>Budget Web App</title>
     <link href="CSS/estilos.css" rel="stylesheet"/>
 </head>
 <body onload="LoadApp()">
@@ -12,7 +12,7 @@
             <div class="BudgetTitle">
                 Available Budget
             </div>
-            <div class="BudgetValue" id="Budget">+ 2,000</div>
+            <div class="BudgetValue" id="Budget">2,000</div>
             <div class="BudgetIncome CleanStyles">
                 <div class="BudgetIncome--Text">Income</div>
                 <div class="Right">
@@ -30,9 +30,47 @@
         </div>
     </div>
 
+    <div class="Container CleanStyles">
+        <div class="Income">
+            <h2 class="IncomeTitle">Income</h2>
+            <div id="IncomeList">
+                <div class="Element CleanStyles">
+                    <div class="ElementDescription">Salary</div>
+                    <div class="Right CleanStyles">
+                        <div class="ElementValue">+ 2,200</div>
+                        <div class="ElementDelete">
+                            <button class="ElementDeleteButton">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Outcome">
+            <h2 class="OutcomeTitle">Outcome</h2>
+            <div id="OutcomeList">
+                <div class="Elemnt CleanStyles">
+                    <div class="ElementDescription">Rent</div>
+                    <div class="Right CleanStyles">
+                        <div class="ElementValue">- 900</div>
+                        <div class="ElementPercent">21%</div>
+                        <div class="ElementDelete">
+                            <button class="ElementDeleteButton">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="JS/Data.js"></script>
     <script src="JS/Income.js"></script>
     <script src="JS/Outcome.js"></script>
     <script src="JS/App.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

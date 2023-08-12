@@ -1,11 +1,11 @@
-const Income = [
-    new income("Salary", 2100),
-    new income("Sale", 1500)
+const income = [
+    new Income("Salary", 2100),
+    new Income("Sale", 1500)
 ];
 
-const Outcome = [
-    new outcome("Rent", 900),
-    new outcome("Clothes", 400)
+const outcome = [
+    new Outcome("Rent", 900),
+    new Outcome("Clothes", 400)
 ];
 
 let LoadApp = () =>{
@@ -14,7 +14,7 @@ let LoadApp = () =>{
 
 let TotalIncome = () =>{
     let TotalIncome = 0;
-    for (let Income of Incomes){
+    for (let Income of income){
         TotalIncome += Income.Value;
     }
     return TotalIncome;
@@ -22,7 +22,7 @@ let TotalIncome = () =>{
 
 let TotalOutcome = () =>{
     let TotalOutcome = 0;
-    for (let Outcome of Outcomes){
+    for (let Outcome of outcome){
         TotalOutcome += Outcome.Value;
     }
     return TotalOutcome;
@@ -31,8 +31,16 @@ let TotalOutcome = () =>{
 let LoadHeader = () =>{
     let Budget = TotalIncome() - TotalOutcome();
     let PercentOutcome = TotalOutcome()/TotalIncome();
-    document.getElementById("Budget").innerHTML = Budget;
-    document.getElementById("Percent").innerHTML = PercentOutcome;
-    document.getElementById("Income").innerHTML = TotalIncome();
-    document.getElementById("Outcome").innerHTML = TotalOutcome();
+    document.getElementById("Budget").innerHTML = CurrencyFormat(Budget);
+    document.getElementById("Percent").innerHTML = PercentFormat(PercentOutcome);
+    document.getElementById("Income").innerHTML = CurrencyFormat(TotalIncome());
+    document.getElementById("Outcome").innerHTML = CurrencyFormat(TotalOutcome());
+}
+
+const CurrencyFormat = (Value) =>{
+    return Value.toLocaleString("en-US",{style:"currency", currency:"USD", minimumFractionDigits: 2});
+}
+
+const PercentFormat = (Value) =>{
+    return Value.toLocaleString("en-US",{style:"percent", minimumFractionDigits: 2});
 }
