@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link href="CSS/estilos.css" rel="stylesheet"/>
+</head>
+<body onload="LoadApp()">
+    <div class="Header">
+        <div class="Budget">
+            <div class="BudgetTitle">
+                Available Budget
+            </div>
+            <div class="BudgetValue" id="Budget">+ 2,000</div>
+            <div class="BudgetIncome CleanStyles">
+                <div class="BudgetIncome--Text">Income</div>
+                <div class="Right">
+                    <div class="BudgetIncome--Value" id="Income">+ 4,000</div>
+                    <div class="BudgetIncome--Percent">&nbsp;</div>
+                </div>
+            </div>
+            <div class="BudgetOutcome CleanStyles">
+                <div class="BudgetOutcome--Text">Outcome</div>
+                <div class="Right CleanStyles">
+                    <div class="BudgetOutcome--Value" id="Outcome">- 1,900</div>
+                    <div class="BudgetOutcome--Percent" id="Percent">45%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/Data.js"></script>
+    <script src="JS/Income.js"></script>
+    <script src="JS/Outcome.js"></script>
+    <script src="JS/App.js"></script>
+</body>
+</html>
