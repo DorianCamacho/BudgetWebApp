@@ -30,39 +30,30 @@
         </div>
     </div>
 
+    <form id="Forms" onsubmit="return false;">
+        <div class="Add">
+            <div class="AddContainer">
+                <select class="AddType" id="Type">
+                    <option value="Income" selected>+</option>
+                    <option value="Outcome">-</option>
+                </select>
+                <input type="text" class="AddDescription" placeholder="Add Description" id="Description"/>
+                <input type="number" class="AddValue" placeholder="Value" id="Value" step="any"/>
+                <button class="AddButton" onclick="AddData()">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+
     <div class="Container CleanStyles">
         <div class="Income">
             <h2 class="IncomeTitle">Income</h2>
-            <div id="IncomeList">
-                <div class="Element CleanStyles">
-                    <div class="ElementDescription">Salary</div>
-                    <div class="Right CleanStyles">
-                        <div class="ElementValue">+ 2,200</div>
-                        <div class="ElementDelete">
-                            <button class="ElementDeleteButton">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="IncomeList"></div>
         </div>
         <div class="Outcome">
             <h2 class="OutcomeTitle">Outcome</h2>
-            <div id="OutcomeList">
-                <div class="Elemnt CleanStyles">
-                    <div class="ElementDescription">Rent</div>
-                    <div class="Right CleanStyles">
-                        <div class="ElementValue">- 900</div>
-                        <div class="ElementPercent">21%</div>
-                        <div class="ElementDelete">
-                            <button class="ElementDeleteButton">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="OutcomeList"></div>
         </div>
     </div>
 
